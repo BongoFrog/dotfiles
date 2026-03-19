@@ -1,0 +1,36 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": 40,
+	"spacing": 4,
+	"modules-left": ["group/quickAccess","hyprland/workspaces"],
+	"modules-center": ["clock"],
+	"modules-right": ["tray","group/settings","group/monitoring","/custom/end"],
+
+	"group/quickAccess":{
+	"modules": [
+		"custom/launcher",
+		"custom/browser",
+		"custom/terminal"
+	]
+	},
+	"custom/launcher": {
+		"icon": 🐉,
+		"on-click": "hyprlauncher"
+
+	}
+	////quickAccess element custom
+	
+	///
+	"hyprland/workspaces": {
+	},
+	"group/settings":{
+	// slide down a window that can adjust audio, brightness, battery mode (mode that stop charging the battery when it reach about certain percent and instead go directly into the mainboard) 
+	},
+	"group/monitoring": {
+	// 
+
+	}
+
+
+}
