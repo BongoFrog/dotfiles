@@ -21,13 +21,15 @@
     "network", 
     "battery",
     "backlight",
+    "pulseaudio",
     "custom/logout"
   ],
  /// element config 
   "custom/access": {
-    "format": "🐉",
-    "tooltip": false,
-    "on-click":"rofi -show drun"
+    "format": "⛩️",
+    "tooltip": true,
+    "on-click":"rofi -show drun",
+    "tooltip-format": "menu launcher first, will implement better sub window"
   },
   "custom/browser":{
     "format": "🐦‍🔥",
@@ -142,5 +144,22 @@
   },
   "custom/logout": {
     "format": "🧨"
-  }
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-muted": " Muted",
+    "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", ""]
+    },
+    "on-click": "pavucontrol",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"   
+    }
 }

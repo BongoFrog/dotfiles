@@ -45,7 +45,7 @@ window#waybar {
 #custom-access,
 #custom-terminal,
 #custom-browser {
-  font-size 16px;
+  font-size: 16px;
 }
 
 #custom-access {
@@ -116,6 +116,15 @@ window#waybar {
     border-radius: 8px;
 }
 
+#pulseaudio {
+    color: #f1fa8c; /* Change this to your preferred color */
+    padding: 0 10px;
+}
+
+#pulseaudio.muted {
+    color: #ff5555;
+    background-color: #44475a;
+}
 @keyframes blink {
     to {
         background-color: #ff0000;
