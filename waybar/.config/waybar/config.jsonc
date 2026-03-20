@@ -39,7 +39,7 @@
   },
   "hyprland/workspaces":{
     "format":"{icon}",
-    "format-icon": {
+    "format-icons": {
       "1": "󰊠",
       "2": "󰊠",
       "3": "󰊠",
@@ -56,6 +56,7 @@
     "interval":60,
     "format":"{:%H:%M} ⌛ ",
     "tooltip": true,
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode": "year",
       "mode-mon-col": 4,
@@ -79,33 +80,63 @@
   },
   "memory": {
     "interval": 30,
-    "format": "{}%󰍛",
+    "format": "{}%󰘚",
     "tooltip": true,
     "tooltip-format": "Memory Used: {used:0.1f}GiB / {total:0.1f}GiB\nSwap Used: {swapUsed:0.1f}GiB",
     "on-click": "kitty -e btop",
   },
   "cpu": {
     "interval": 30,
-    "format": ""
+    "format": "{}%󰻠",
+    "tooltip": true,
+    "tooltip-format": "Core0: {usage0}\nCore1: {usage1}\nCore2: {usage2}\nCore3: {usage3}\nCore4: {usage4}\nCore5: {usage5}\nCore6: {usage6}\nCore7: {usage7}",
   },
   "temperature": {
-  
+    "thermal-zone": 0,
+    "interval": 30,
+    "format": "{temperatureC}°C {icon}",
+    "format-critical": "{temperatureC}°C {icon}",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip": true,
+    "critical-threshold": 80,
   },
   "tray": {
-
+    "icon-size": 18,
+    "spacing": 10
   },
   "network": {
-
+    "format": "{ifname}";
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+    "format-disconnected": "󱘖",
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50,
+    "on-click": "nm-connection-editor"
   },
   "battery": {
-
-
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% 󰂄",
+    "format-plugged": "{capacity}% ",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
   },
   "brightness": {
-
-
+    "device": "intel_backlight", // Or "amdgpu_bl0" depending on your CPU
+    "format": "{percent}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", "󰛨"],
+    "on-scroll-up": "brightnessctl set 1%+",
+    "on-scroll-down": "brightnessctl set 1%-",
+    "min-length": 6
   },
   "custom/logout:": {
-
+    "format": "🧨"
   }
 }
