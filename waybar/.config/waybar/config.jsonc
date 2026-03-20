@@ -136,7 +136,7 @@
     "on-scroll-down": "brightnessctl set 1%-",
     "min-length": 6
   },
-  "custom/logout:": {
+  "custom/logout": {
     "format": "🧨"
   }
 }
