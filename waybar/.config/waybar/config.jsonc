@@ -8,19 +8,19 @@
     "custom/terminal",
     "custom/browser",
     "hyprland/workspaces",
-  ],
-  
-  "modules-center": [
-    "clock",
     "memory",
     "cpu",
     "temperature"
   ],
+  
+  "modules-center": [
+    "clock"],
+
   "modules-right": [
     "tray",
     "network", 
     "battery",
-    "brightness",
+    "backlight",
     "custom/logout"
   ],
  /// element config 
@@ -98,7 +98,7 @@
     "format-critical": "{temperatureC}°C {icon}",
     "format-icons": ["", "", "", "", ""],
     "tooltip": true,
-    "critical-threshold": 80,
+    "critical-threshold": 80
   },
   "tray": {
     "icon-size": 18,
@@ -128,7 +128,7 @@
     "format-alt": "{time} {icon}",
     "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
   },
-  "brightness": {
+  "backlight": {
     "device": "intel_backlight", // Or "amdgpu_bl0" depending on your CPU
     "format": "{percent}% {icon}",
     "format-icons": ["", "", "", "", "", "", "", "", "󰛨"],
