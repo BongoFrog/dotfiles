@@ -32,10 +32,14 @@
   "custom/browser":{
     "format": "🐦‍🔥",
     "on-click": "firefox",
+    "tooltip": true,
+    "tooltip-format": "Firefox"
   },
   "custom/terminal": {
     "format": ">_",
     "on-click": "kitty",
+    "tooltip": true,
+    "tooltip-format":"Terminal"
   },
   "hyprland/workspaces":{
     "format":"{icon}",
