@@ -40,13 +40,13 @@
   "hyprland/workspaces":{
     "format":"{icon}",
     "format-icon": {
-      "1":"󰊠",
-      "2":"󰊠",
-      "3":"󰊠",
-      "4":"󰊠",
-      "5":"󰊠",
-      "default":"󰊠",
-      "active":"󰮯",
+      "1": "󰊠",
+      "2": "󰊠",
+      "3": "󰊠",
+      "4": "󰊠",
+      "5": "󰊠",
+      "default": "󰊠",
+      "active": "󰮯",
     },
     "persistent-workspaces": {
       "*": [ 1, 2, 3, 4, 5 ]
@@ -85,7 +85,8 @@
     "on-click": "kitty -e btop",
   },
   "cpu": {
-  
+    "interval": 30,
+    "format": ""
   },
   "temperature": {
   
